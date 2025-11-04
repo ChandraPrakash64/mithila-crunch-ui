@@ -4,7 +4,6 @@ import { Toaster } from '@/components/ui/toaster';
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import Products from '@/components/Products';
-import Testimonials from '@/components/Testimonials';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 import { CartProvider } from '@/context/CartContext';
@@ -22,7 +21,6 @@ function App() {
           <Header />
           <Hero />
           <Products />
-          <Testimonials />
           <Contact />
           <Footer />
           <Cart />
