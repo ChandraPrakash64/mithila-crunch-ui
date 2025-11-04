@@ -3,9 +3,9 @@ import react from '@vitejs/plugin-react'
 import path from 'path'
 
 // https://vitejs.dev/config/
-// base should point to the repository name for GitHub Pages project pages
+// base: '/' for root domain hosting (Hostinger), '/repo/' for GitHub Pages
 export default defineConfig({
-  base: '/mithila-crunch-ui/',
+  base: '/',
   plugins: [react()],
   resolve: {
     alias: {
