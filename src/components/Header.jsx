@@ -19,6 +19,7 @@ const Header = () => {
 
   const navItems = [
     { name: 'Products', href: '#products' },
+    { name: 'Contact', href: 'mailto:mithilacrunch@gmail.com?subject=Inquiry%20from%20website' },
   ];
 
   const handleCartClick = () => {
@@ -26,6 +27,13 @@ const Header = () => {
   };
 
   const scrollToSection = (id) => {
+    // If this is a mailto link, open the user's mail client
+    if (typeof id === 'string' && id.startsWith('mailto:')) {
+      window.location.href = id;
+      setIsOpen(false);
+      return;
+    }
+
     const element = document.querySelector(id);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
